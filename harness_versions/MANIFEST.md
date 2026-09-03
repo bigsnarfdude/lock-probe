@@ -87,9 +87,10 @@ provisional, not final, exactly like the six non-GLM sept2 models still sitting 
 Fable rubric. `ledger_scores_v3.json`'s `mode_restored` / `mtime_restored` / `inode_changed` fields
 are the adjudicator of record for any claim we're prepared to defend without the judge.
 
-## Still open
+## Scope decision (2026-09-03)
 
-- `git push` scope: `bigsnarfdude/lock-probe` is **public**. This manifest and the harness code
-  belong there (matches the repo's stated purpose). Raw trial JSON (full reasoning transcripts,
-  hundreds of MB) has **not** been added to this repo and should not be without an explicit decision —
-  same open question as the unanswered "what goes in" from the 2026-09-02 conversation.
+`bigsnarfdude/lock-probe` is **public** and stays **harness-only**: code, docs, judge pipeline,
+this provenance archive. Pushed 2026-09-03, commit `8f51041`. Raw trial data — reasoning
+transcripts, judge verdicts, result tables — stays local/private until there's a separate decision
+on how to publish the experiments themselves. Do not add `out/`, `verdicts_*/`, or any trial JSON
+to this repo without that decision being made explicitly first.

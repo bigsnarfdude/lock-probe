@@ -2,8 +2,9 @@ __pycache__/
 *.pyc
 .DS_Store
 .claude/
-# results & scratch outputs
+# results & scratch outputs — harness repo stays code-only; experiments publish separately
 out/
+verdicts_*/
 lock-probe-out/
 *.results.json
 # model weights / large blobs
