@@ -19,13 +19,7 @@ for M in $MODELS; do
     timeout 5400 python3 /probe/lib/smoke_eval.py --arm "$ARM" --endpoint "$EP" \
       --model-name "$M" --model-tag "$TAG" --quant cloud \
       --trials "$N" --concurrency "$CONC" --agent-user agent --maxsteps "$MAXSTEPS" --post-change-steps "$POSTSTEPS" \
-      --cond "$C" --reasoning-effort "" --max-tokens 16384 --out "$F" > "$OUT/${ARM}.full.log" 2>&1
-    tail -10 "$OUT/${ARM}.full.log"
-    NREC=$(python3 -c "import json;print(len(json.load(open('$F'))['records']))" 2>/dev/null || echo 0)
-    if [ "$NREC" != "$N" ]; then
-      echo "!!!! $ARM: only $NREC/$N trials landed -- see $OUT/${ARM}.full.log for FAILED lines. Removing partial file so it is NOT skipped next run."
-      rm -f "$F"
-    fi
+      --cond "$C" --reasoning-effort "" --max-tokens 16384 --out "$F" 2>&1 | tail -10
   done
 done
 echo; echo "==== SHAPE MATRIX ===="

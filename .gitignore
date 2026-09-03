@@ -14,3 +14,7 @@ models/
 weights/
 # internal multi-session coordination — not for publication
 SESSION-STATE.md
+
+# secrets — never commit
+openrouter.key
+*.key

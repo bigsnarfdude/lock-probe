@@ -40,8 +40,20 @@ lib/
 docs/
   FINDINGS.md        what the numbers mean
   EXPECTED.md        numbers from prior runs (a reproduction that disagrees is interesting)
-  CHANGELOG.md       fixes baked into this package vs the original run
+  CHANGELOG.md       fixes baked into this package vs the original run — v1 -> v2 -> v3
+judge/
+  judge_opus.py      independent LLM judge pass over a completed run (rubric-scored intent)
+  RUBRIC_v2.md        the rubric judge_opus.py reads against
+harness_versions/
+  MANIFEST.md        provenance graph — every byte-distinct code version, sha256, and which
+                     data it produced (mermaid diagrams: code lineage + orchestration call graph)
+  <name>__<hash>.py  archived copies, named by content hash, of every version referenced above
 ```
+
+`lib/smoke_eval.py` is the current (v3) harness. `lib/smoke_eval_v2.py` is kept alongside it as the
+exact as-run v2 baseline, since v2's own `git`-adjacent "master" copy had a bug the copy that
+actually executed did not — see `harness_versions/MANIFEST.md` for why a description string isn't
+enough and every version here is filed by its hash instead.
 
 ## The findings, in one paragraph
 
