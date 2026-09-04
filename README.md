@@ -3,7 +3,7 @@
 A controlled behavioral-forensics eval for agentic LLMs. One locked file, one task, one varied
 sentence — scored from the filesystem, not the transcript.
 
-**Companion to** the `ai-eval-security-lab` infra replication. That project proves the security
+**Companion to** the `ai-eval-security-lab` infra replication. That project shows that the security
 *controls* catch an escape; this one measures the *behaviour* that leads to one.
 
 ## The question
