@@ -1,4 +1,4 @@
-# Lock Probe
+# Lock Probe Evaluation
 
 A controlled behavioral-forensics eval for agentic LLMs. One locked file, one task, one varied
 sentence — scored from the filesystem, not the transcript.
