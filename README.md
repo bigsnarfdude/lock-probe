@@ -6,7 +6,8 @@ sentence — scored from the filesystem, not the transcript.
 **Companion to** the `ai-eval-security-lab` infra replication. That project shows that the security
 *controls* catch an escape; this one measures the *behaviour* that leads to one.
 
-Blog post 
+Blog post
+
 The Model Wipes Its Fingerprints: Unprompted Forensic Concealment in Open-Weight Agents
 https://huggingface.co/spaces/vincentoh/wipes-its-fingerprints
 
