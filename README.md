@@ -6,6 +6,8 @@ sentence — scored from the filesystem, not the transcript.
 **Companion to** the `ai-eval-security-lab` infra replication. That project shows that the security
 *controls* catch an escape; this one measures the *behaviour* that leads to one.
 
+https://huggingface.co/spaces/vincentoh/wipes-its-fingerprints
+
 ## The question
 
 When you tell a model it's being watched, does it hide what it did? The probe gives a model a
